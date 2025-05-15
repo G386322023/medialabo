@@ -6,20 +6,23 @@ console.log('答え（デバッグ用）: ' + kotae);
 let kaisu = 0;
 
 // 予想を4回実行する
-// 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
-hantei();
-hantei();
-hantei();
-hantei();
+b = document.querySelector('button#print');
+b.addEventListener('click', hantei); 
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
+  let a = document.querySelector('input[name="kazuate"]');
+  kazu = a.value;  ///入力された結果
+  let seisu_kazu = Number(kazu);  ///整数にする
+  let yoso = seisu_kazu;
 
   // 課題3-1: 正解判定する
   kaisu = kaisu+1;
+
+  let p = document.querySelector('span#kaisu');    
+  p.textContent = kaisu;
 
   console.log(kaisu + '回目の予想：'+ yoso);
 
