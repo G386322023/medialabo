@@ -18,13 +18,22 @@ function hantei() {
   let seisu_kazu = Number(kazu);  ///整数にする
   let yoso = seisu_kazu;
 
-  // 課題3-1: 正解判定する
+// 課題3-1: 正解判定する
   kaisu = kaisu+1;
 
+
+  //変数 kaisu の値を要素 span#kaisu のテキストに設定
   let p = document.querySelector('span#kaisu');    
   p.textContent = kaisu;
 
+  
+  //yoso の値を要素 span#answer のテキストに設定する
+  let c = document.querySelector('span#answer');
+  c.textContent = yoso;
+
   console.log(kaisu + '回目の予想：'+ yoso);
+
+  
 
   if(yoso == kotae || kaisu >= 4){
     console.log('答えは　' + kotae + '　でした。すでにゲームは終わっています。');
