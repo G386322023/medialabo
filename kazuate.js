@@ -33,19 +33,21 @@ function hantei() {
 
   console.log(kaisu + '回目の予想：'+ yoso);
 
-  
+  //メッセージの出力先を，コンソールから要素 p#result 要素のテキストに切り替える
+  let d = document.querySelector('p#result');
 
-  if(yoso == kotae || kaisu >= 4){
-    console.log('答えは　' + kotae + '　でした。すでにゲームは終わっています。');
-  }else if(yoso == kotae){
-    console.log(' 正解です。おめでとう！');
-  }else if(kaisu == 3){
-    console.log(' まちがい。残念でした答えは　' + kotae + '　です。');
-  }else if(yoso < kotae){
-    console.log(' まちがい。答えはもっと大きいですよ。');
-  }else if(yoso > kotae){
-    console.log(' まちがい。答えはもっと小さいですよ。');
+  if(yoso == kotae || kaisu >= 4){ 
+    d.textContent = '答えは　' + kotae + '　でした。すでにゲームは終わっています。' ; 
+  }else if(yoso == kotae){ 
+    d.textContent = ' 正解です。おめでとう！' ; 
+  }else if(kaisu == 3){ 
+    d.textContent = ' まちがい。残念でした答えは　' + kotae + '　です。' ;
+  }else if(yoso < kotae){ 
+    d.textContent = ' まちがい。答えはもっと大きいですよ。' ; 
+  }else if(yoso > kotae){ 
+    d.textContent = ' まちがい。答えはもっと小さいですよ。' ; 
   }
+
 
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール

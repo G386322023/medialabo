@@ -12,17 +12,17 @@ function print(data) {
   console.log(data.name); //都市名
 }
 
+//プルダウンメニュー 内容
+
+
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
 }
 
-// 課題5-1 のイベントハンドラの定義
-function show() {
 
-}
-
-// 課題5-1, 6-1 のイベントハンドラ登録処理は以下に記述
+// 6-1 のイベントハンドラ登録処理は以下に記述
 
 
 
